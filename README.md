@@ -1,3 +1,3 @@
 # React başlangıç Projesi
 
-Bir başlangıç serisi için gerekli olan kodlardır 313131
+Bir başlangıç serisi için gerekli olan kodlardır
