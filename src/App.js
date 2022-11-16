@@ -1,5 +1,8 @@
-import logo from "./logo.svg"
 import styles from './App.module.css'
+import { Title } from "./Components"
+import Bootstrap from "./Bootstrap"
+import './tailwind.css'
+import Tailwind from "./Tailwind"
 
 function App() {
 
@@ -9,11 +12,10 @@ function App() {
       <p>
         {process.env.REACT_APP_API_URL}
       </p>
-      {process.env.NODE_ENV === 'production' && (
-        <>
-        <h1>Bu bir deneme mesajıdır</h1>
-        </>
-      )}
+        <Title>Trying messages</Title>
+        <Title theme="dark">This is trying messages</Title>
+        <Bootstrap/>
+        <Tailwind/>
     </div>
   );
 }
