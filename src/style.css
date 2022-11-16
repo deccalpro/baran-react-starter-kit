@@ -1,0 +1,8 @@
+.env {
+  background: yellow;
+}
+
+.env span {
+  background: black;
+  color: red;
+}
