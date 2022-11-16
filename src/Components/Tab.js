@@ -1,6 +1,9 @@
-function Tab({ children }) {
+function Tab({ children, activeTab }) {
   return (
     <div>
+      <nav>
+        {children.map((tab, index) => <button className={activeTab === index ? 'bg-green-500' : 'bg-red-500'} key={index}>{tab.props.title}</button>)}
+      </nav>
       {children}
     </div>
   )
@@ -8,7 +11,7 @@ function Tab({ children }) {
 
 Tab.Panel = function({ children, title }) {
   return(
-    <div>{children} {title}</div>
+    <div>{children}</div>
   )
 }
 
