@@ -1,10 +1,17 @@
-function Tab({ children, activeTab }) {
+function Tab({ children, activeTab, setActiveTab }) {
   return (
     <div>
       <nav>
-        {children.map((tab, index) => <button className={activeTab === index ? 'bg-green-500' : 'bg-red-500'} key={index}>{tab.props.title}</button>)}
+        {children.map((tab, index) => (
+          <button
+          onClick={() => setActiveTab(index)}
+          className={activeTab === index ? 'bg-green-600' : 'bg-red-600'}
+          key={index}>
+            {tab.props.title}
+            </button>
+        ))}
       </nav>
-      {children}
+      {children[activeTab]}
     </div>
   )
 }

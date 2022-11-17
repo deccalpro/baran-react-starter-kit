@@ -1,12 +1,17 @@
 import './tailwind.css'
 import Button from "./Components/Button"
 import Tab from "./Components/Tab"
+import { useState } from "react"
 
 function App() {
+  const [activeTab, setActiveTab] = useState(0)
   return (
     <div>
       <div style={{padding: 20,}}>
-        <Tab activeTab={1}>
+        <button onClick={() => setActiveTab(activeTab === 2 ? 0 : activeTab+1)}>
+          Change active tab!
+        </button>
+        <Tab activeTab={activeTab} setActiveTab={setActiveTab}>
           <Tab.Panel title="Profile">1. Tab</Tab.Panel>
           <Tab.Panel title="About">2. Tab</Tab.Panel>
           <Tab.Panel title="Settings">3. Tab</Tab.Panel>
